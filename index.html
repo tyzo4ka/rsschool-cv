@@ -1,8 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rsschool-cv-html</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+<div class="wrapper">
+    <header>
+        <img src="uploads/photo.jpg" alt="photo" class="profile-photo"/>
+
+        <div class='header-content'>
+            <div class="name">
+                <h1>Evgenia Generalova</h1>
+                <h2>Junior Full Stack Developer</h2>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#about">About</a></li>
+                    <li class="nav-item"><a href="#contacts">Contacts</a></li>
+                    <li class="nav-item"><a href="#skills">Skills</a></li>
+                    <li class="nav-item"><a href="#education">Education</a></li>
+                    <li class="nav-item"><a href="#code">Code</a></li>
+                    <li class="nav-item"><a href="#projects">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+        <div class='side-column'>
+            <section id="skills">
+                <h3>Skills</h3>
+                <ul class="skills">
+                    <li>Python</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>SQL</li>
+                    <li>Git</li>
+                    <li>Docker</li>
+                </ul>
+            </section>
+
+            <section id="languages">
+                <h3>languages</h3>
+                <div class="title">English</div>
+                <div class="description">
+                    upper intermediate
+                </div>
+            </section>
+
+            <section id="contacts">
+                <h3>Contacts</h3>
+                <ul class="contacts-list">
+                    <li><a href="tel:+996555444855">+996555444855</a></li>
+                    <li><a href="mailto:tyza@mail.ru">tyza@mail.ru</a></li>
+                    <li><a href="https://telegram.me/ttyza">Telegram</a></li>
+                    <li><a href="https://www.linkedin.com/in/evgenia-generalova-3223b669/">LinkedIn</a></li>
+                </ul>
+            </section>
+
+            <section id="education">
+                <h3>Education</h3>
+                <div class="education_list">
+                    <div class="title">Kyrgyz-Russian Slavic University</div>
+                    <div class="description">transport management engineer</div>
+                    <div class="title">IT Attractor</div>
+                    <div class="description">Python/Django web developer</div>
+                    <div class="title">Stepik</div>
+                    <div class="description">Python, Javascript, SQL courses</div>
+                </div>
+            </section>
+        </div>
+
+        <div class='main-block'>
+            <section id="about">
+                <h3>About Me</h3>
+                <div class="content">
+                    <p>I love learning new things, reading books and visiting new places.</p>
+                    <p>A big fan of sports such as swimming, running and bodybuilding. Someday want to do triathlon.</p>
+                    <p>In my free time I watch serials, anime and read pikabu.</p>
+                </div>
+            </section>
+            <section id="code">
+                <h3>Code example</h3>
+                <div class="code-block">
+                <pre>
+                    <code>
+class ProductDetailView(DetailView):
+    template_name = "products/detail.html"
+    context_object_name = "product"
+    model = Product
+
+    def get_context_data(self, **kwargs):
+        context = super(ProductDetailView, self).get_context_data(**kwargs)
+        units = Unit.objects.filter(product_id=self.object.pk, quantity__gte=1).order_by('-size')
+        logger.debug(self.object.category)
+
+        if self.object.category.title == 'perfumery':
+            context['sizes'] = {'title': 'Oбъем', 'values': units}
+        else:
+            context['sizes'] = {'title': 'Размер', 'values': units}
+        return context
+                 </code>
+             </pre>
+                </div>
+            </section>
+            <section id="projects">
+                <h3>Projects</h3>
+                <div class="content">
+                    <p>
+                        <a href="http://vskg.shop/">Web catalog for my business (vskg.shop)</a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/tyzo4ka/group1_muk_crm">CRM for university</a>
+                    </p>
+                    <p>
+                    <a href="https://github.com/tyzo4ka/poputka">service for finding fellow travelers</a>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="logos">
+            <div class="footer_git">
+                <a href="https://github.com/tyzo4ka" target="_blank">
+                    <img src="uploads/github.svg" alt="Me on GitHub" class="footer_git_logo"></a>
+            </div>
+            <div class="footer-rsschool">
+                <a href="https://rs.school/js/"
+                   target="_blank">
+                    <img src="uploads/rs_school_js.svg"
+                         alt="RSSchool logo"/>
+                </a>
+            </div>
+        </div>
+        <div class="footer-year">2022</div>
+    </footer>
+</div>
+
 </body>
 </html>
