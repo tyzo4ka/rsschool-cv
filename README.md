@@ -1,2 +1,2 @@
-https://tyzo4ka.github.io/rsschool-cv/cv
-https://tyzo4ka.github.io/rsschool-cv/
+1. https://tyzo4ka.github.io/rsschool-cv/cv
+2. https://tyzo4ka.github.io/rsschool-cv/
